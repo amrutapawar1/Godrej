@@ -8,7 +8,7 @@ $country_code = $_POST['country_code'];
 $country_name = $_POST['country_name'];
 $message= $_POST['message'];
 
-$to = "harshad.bhosale4378@gmail.com";
+$to = "avadhut@bricspace.com";
 $subject = "HTML email";
 
 $message = "
@@ -35,7 +35,7 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 // More headers
-$headers .= 'From: <no_reply@harshad.bhosale4378.com>' . "\r\n";
+$headers .= 'From: <no_reply@avadhut@bricspace.com>' . "\r\n";
 $headers .= 'Cc: ' . "\r\n";
 
 
