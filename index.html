@@ -1619,10 +1619,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- <h4 class="light-green">2, 3, 3.5 & 4 BHK Apartments</h4> -->
                   <form action="contact.php" method="post" class="form-side" id="pardotForm" class="pardotForm">
                      <div class="box">
-                            <select class="form-control project" name="project" id="project" required style="height: 46px;">
-                                <option value="Choose Project">Choose Project</option>
+                            <select class="form-control" name="project"  id="project"  style="height: 46px;">
+                                <option value="">Choose Project</option>
                                 <option value="Godrej Elaris">Godrej Elaris</option>
-                                <option value="Gale At Godrej Park World">Gale At Godrej Park World</option>
+                                <option value="Gale At Godrej Park_World">Gale At Godrej Park World</option>
                                 <option value="Godrej Serene">Godrej Serene</option>
                                 <option value="Godrej Plots">Godrej Plots</option>
                                 <option value="Godrej Aqua Vista">Godrej Aqua Vista</option>
@@ -2009,8 +2009,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- <h4 class="light-green">2 & 3 Bed Apartments</h4>  -->
                   <form action="contact.php" method="post" class="form-side" id="pardotForm" class="pardotForm">
                     <div class="box">
-                            <select class="form-control project" name="project" id="project" required style="height: 46px;">
-                                <option value="Choose Project">Choose Project</option>
+                            <select class="form-control " name="project" id="project"  style="height: 46px;">
+                                <option value=" ">Choose Project</option>
                                 <option value="Godrej Elaris">Godrej Elaris</option>
                                 <option value="Gale At Godrej Park World">Gale At Godrej Park World</option>
                                 <option value="Godrej Serene">Godrej Serene</option>
@@ -2397,13 +2397,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      <!-- Onload start -->
     <script type="text/javascript">
         $(document).ready(function () {
-            $("select[name='project']").focusout(function () {
-                $(".project").val('+' + $("#project").val() + $(this).siblings("input[name='project']").val());
-            });
+          
             $("input[name='modal_my_mobile2']").focusout(function () {
                 $(".mobileconcat").val('+' + $("#country_code").val() + $(this).val());
             });
 
+           
             // on country name field change
             $("select[name='country_name']").focusout(function () {
                 $(".mobileconcat").val('+' + $("#country_code").val() + $(this).siblings("input[name='modal_my_mobile2']").val());
