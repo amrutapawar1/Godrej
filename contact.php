@@ -1,7 +1,7 @@
 <?php
 
-
- $name = $_POST['name'];
+$project = $_POST['project'];
+$name = $_POST['name'];
 $email = $_POST['email'];
 $contact = $_POST['modal_my_mobile2'];
 $country_code = $_POST['country_code'];
@@ -19,6 +19,7 @@ $message = "
 <body>
 <p>This email contains HTML Tags!</p>
 <table>
+<tr>ProjectName&#58; $project</tr>
 <tr>Name&#58; $name</tr>
 <tr>Email&#58; $email</tr>
 <tr>Phone&#58; $contact</tr>
