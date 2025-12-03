@@ -1619,8 +1619,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- <h4 class="light-green">2, 3, 3.5 & 4 BHK Apartments</h4> -->
                   <form action="contact.php" method="post" class="form-side" id="pardotForm" class="pardotForm">
                      <div class="box">
-                            <select class="form-control" name="project" id="project" required style="height: 46px;">
-                                <option value="">Choose Project</option>
+                            <select class="form-control project" name="project" id="project" required style="height: 46px;">
+                                <option value="Choose Project">Choose Project</option>
                                 <option value="Godrej Elaris">Godrej Elaris</option>
                                 <option value="Gale At Godrej Park World">Gale At Godrej Park World</option>
                                 <option value="Godrej Serene">Godrej Serene</option>
@@ -1644,6 +1644,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <option value="Godrej Forest Groove">Godrej Forest Groove</option>
                                 <option value="Godrej River Royale">Godrej River Royale</option>
                             </select>
+                            <input type="hidden" value="" name="project" id="project" class="project" />
                         </div>
                 <div class="box">
                   <input type="text" class="form-control" id="fname"  name="name" required placeholder="Enter Name">
@@ -2009,7 +2010,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <form action="contact.php" method="post" class="form-side" id="pardotForm" class="pardotForm">
                     <div class="box">
                             <select class="form-control project" name="project" id="project" required style="height: 46px;">
-                                <option value="">Choose Project</option>
+                                <option value="Choose Project">Choose Project</option>
                                 <option value="Godrej Elaris">Godrej Elaris</option>
                                 <option value="Gale At Godrej Park World">Gale At Godrej Park World</option>
                                 <option value="Godrej Serene">Godrej Serene</option>
@@ -2033,6 +2034,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <option value="Godrej Forest Groove">Godrej Forest Groove</option>
                                 <option value="Godrej River Royale">Godrej River Royale</option>
                             </select>
+                             <input type="hidden" value="" name="project" id="project" class="project" />
                         </div>
                 <div class="box">
                   <input type="text" class="form-control" id="fname"  name="name" required placeholder="Enter Name">
@@ -2395,9 +2397,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      <!-- Onload start -->
     <script type="text/javascript">
         $(document).ready(function () {
-           $('select.project').change(function () {
-                var capacityValue = $("option:selected", this).data('project');
-                $('.project').val(project);
+            $("select[name='project']").focusout(function () {
+                $(".project").val('+' + $("#project").val() + $(this).siblings("input[name='project']").val());
             });
             $("input[name='modal_my_mobile2']").focusout(function () {
                 $(".mobileconcat").val('+' + $("#country_code").val() + $(this).val());
