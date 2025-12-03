@@ -9,7 +9,7 @@ $country_name = $_POST['country_name'];
 $message= $_POST['message'];
 
 $to = "avadhut@bricspace.com";
-$subject = "HTML email";
+$subject = "New Lead from Website !";
 
 $message = "
 <html>
@@ -36,26 +36,20 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 // More headers
-$headers .= 'From: <no_reply@avadhut@bricspace.com>' . "\r\n";
-$headers .= 'Cc: ' . "\r\n";
-
+$headers .= 'From: <avadhut@bricspace.com>' . "\r\n";
+$headers .= 'Cc: avadhut@bricspace.com\r\n';
 
 
 if(mail($to,$subject,$message,$headers)) //Send an Email. Return true on success or false on error
-
-
 {
-echo 
-
-"<script>window.location.href='index.html';</script>";
+echo "<script>window.location.href='index.html';</script>";
 }
 else
 {
-echo "<script>
+echo "<script> 
 alert('Plz Try Agian');
-window.location.href='index.html'
-
-;
+window.location.href='index.html';
 </script>";
 }
+
 ?>
